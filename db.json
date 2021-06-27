@@ -1,0 +1,53 @@
+{
+  "books": [
+    {
+      "id": "_ygz05dw1zwd",
+      "title": "Kobzar",
+      "author": "Taras Shevchenko",
+      "category": "Poems",
+      "isbn": "9888765545091"
+    },
+    {
+      "id": "_ixon7rf3k6c",
+      "title": "1984",
+      "author": "George Orwell",
+      "category": "Fantasy",
+      "isbn": "0998874430989"
+    },
+    {
+      "id": "_y2vbpk1tu8f",
+      "title": "Gulliver's Travells",
+      "author": "Jonathan Swift",
+      "category": "Comedy",
+      "isbn": "0987860904567"
+    },
+    {
+      "id": "_9z3ulg50dw6",
+      "title": "Tom Sawyer",
+      "author": "Mark Twain",
+      "category": "Comedy",
+      "isbn": "9908677811267"
+    },
+    {
+      "id": "_5gjjhrsu772",
+      "title": "Lys Mykyta",
+      "author": "Ivan Franko",
+      "category": "Fantasy",
+      "isbn": "9998004602560"
+    },
+    {
+      "id": "_2qq04ii4qg",
+      "title": "Homo Sapiens",
+      "author": "Yuval Harari",
+      "category": "Non-Fiction",
+      "isbn": "9956096132801"
+    },
+    {
+      "id": "_7tlo4imhohk",
+      "title": "The Bible",
+      "author": "Undefined",
+      "category": "Biography",
+      "isbn": "0975600984561"
+    }
+  ]
+}
