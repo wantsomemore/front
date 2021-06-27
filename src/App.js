@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Form from './components/Form/Form'
+import Dashboard from './components/Dashboard/Dashboard'
+import EditForm from './components/EditForm/EditForm'
+import { BookContext } from './BookContext'
+import api from './api/books'
+const App = () => {
 
-function App() {
+  const [books, setBooks] = useState([]);
+
+  const getData = async () => {
+    const response = await api.get('/books');
+    const data = await response.data;
+    setBooks(data);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+    <Switch>
+    <BookContext.Provider value={[books, setBooks]}>
+     <Route exact path='/' component={Dashboard} />
+     <Route path='/form' component={Form} />
+     <Route path='/edit/:id' component={EditForm} />
+    </BookContext.Provider>
+    </Switch>
+    </Router>
+  )
 }
 
-export default App;
+export default App
+
